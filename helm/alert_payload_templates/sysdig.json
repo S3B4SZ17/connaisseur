@@ -1,0 +1,24 @@
+{
+    "events": [
+        {
+            "timestamp": " {{ timestamp }}",
+            "rule": "Check image signature",
+            "priority": " {{priority}}",
+            "output": "{{ alert_message }} for Image {{ images }}",
+            "source": "Connaisseur AC",
+            "tags": [
+                "validator",
+                "connaisseur"
+            ],
+            "output_fields": {
+                "cluster": "{{cluster}}",
+                "alert_message": "{{alert_message}}"
+            }
+        }
+    ],
+    "labels": {
+        "image": "{{ images }}",
+        "environment": "dev",
+        "cloud-region": "us-east-1"
+    }
+}
